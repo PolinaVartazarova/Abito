@@ -1,0 +1,109 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: #0A143A;
+}
+
+/*margin: auto автоматическое выравнивание посередине*/
+.header {
+	max-width: 1146px;
+	margin: auto;
+	padding-top: 30px;
+}
+
+
+/*  display: flex; гибкое поведение для элементов
+	align-items: center; расположение, выравнивание  
+	justify-content: space-between; размещение*/
+
+.navbar {
+	display: flex;  
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+
+/*автоматический отступ справа*/
+.navbar-menu {
+	margin-right: auto;
+}
+
+
+/*display: flex расположение в ряд*/
+.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0 22px 0 22px;
+	display: flex;
+}
+
+.menu-item:not(:last-child) {
+	margin-right: 14px;
+}
+
+/*color: inherit цвет текста как у родителя*/
+.menu-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*display: inline-block чтобы кнопки могли нормально воспринимать отступы*/
+.button {
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.button-link {
+	color: inherit;
+}
+
+.button-primary {
+	background-color: #256EEB;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+
+/*найти в figma нужный слой (поле ввода), 
+посмотреть цвет и радиус скругления, получается скругление по краям*/
+/*display: flex гибкое отображение, элемент занимает всю высоту*/
+.search-panel {
+	height: 50px;
+	background-color: #256EEB;
+	border-radius: 5px;
+	display: flex;
+	padding: 3px;
+}
+
+/*flex-grow растяжение 1 всё свободное место внутри родительского блока*/
+/*для внутренней области поля ввода скругление можно посмотреть в нужном слое в figma*/
+/*отключить/убрать обводку*/
+/*padding, чтобы отлепить подсказку и Поиск от краёв*/
+.search-input {
+	flex-grow: 1;
+	background: #FFF;
+    border-radius: 5px;
+    border: none;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+
+/*display: flex, align-items: center 
+выровнять содержимое кнопки по центру*/
+.search-button {
+	background-color: #256EEB;
+	border: none;
+	color: #FFF;
+	padding-left: 20px; 
+	padding-right: 17px;
+	display: flex;
+	align-items: center;
+}
+
+.search-button-text {
+	margin-left: 5px;
+}
